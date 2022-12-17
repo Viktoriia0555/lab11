@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  background-color: #284387;
+  grid-template-columns: 1fr 5fr;
+}
+
+nav {
+  width: 200px;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 20px 10px;
+}
+
+nav .item {
+  width: 100%;
+  height: 100px;
+  margin: 10px 0;
+  animation-name: item-appear;
+  animation-duration: 0.75s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+}
+
+@keyframes item-appear {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.25);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 20px 0;
+}
+
+#container {
+  height: 100%;
+  width: 75%;
+  border: 2px solid grey;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+}
+
+#container .part {
+  width: 100%;
+  height: 10%;
+  background-color: red;
+  animation-duration: 1s;
+  animation-name: part-appear;
+  animation-fill-mode: backwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes part-appear {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 10%;
+  }
+}
+
+.flex-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
